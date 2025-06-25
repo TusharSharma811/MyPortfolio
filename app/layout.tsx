@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Portfolio | Full Stack Engineer",
   description:
     "Computer Science student and Full Stack Engineer specializing in React, Next.js, Node.js, and distributed systems.",
-    generator: 'v0.dev'
+
 }
 
 export default function RootLayout({
@@ -18,8 +18,14 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
+    <>
+      <head>
+        <link rel="icon" type="image/x-icon" href="/favicon.png" />
+      </head>
     <html lang="en" className="dark">
+      
       <body className={inter.className}>{children}</body>
     </html>
+    </>
   )
 }

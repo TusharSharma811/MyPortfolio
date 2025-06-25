@@ -260,7 +260,7 @@ export default function Portfolio() {
                     transition={{ delay: 0.4, duration: 0.6 }}
                     className="text-lg text-gray-400 leading-relaxed max-w-lg"
                   >
-                    Final-year Computer Science student passionate about full-stack development, distributed systems,
+                    Final-year Engineering student passionate about full-stack development, generative AI,
                     and creating impactful technology solutions.
                   </motion.p>
                 </div>
@@ -304,7 +304,7 @@ export default function Portfolio() {
                   <div className="space-y-3">
                     <div className="flex items-center gap-2 text-white/70 text-sm">
                       <Code2 className="w-4 h-4" />
-                      <span>3+ years of development experience</span>
+                      <span>2+ years of development experience and self-learning</span>
                     </div>
                     <div className="flex flex-wrap gap-2 mb-3">
                       {["Full-Stack", "Systems Design", "Problem Solving"].map((skill, index) => (
@@ -324,9 +324,9 @@ export default function Portfolio() {
                       <span>Connect:</span>
                       <div className="flex gap-2">
                         {[
-                          { icon: Github, label: "GitHub", href: "https://github.com" },
-                          { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com" },
-                          { icon: Mail, label: "Email", href: "mailto:your.email@example.com" },
+                          { icon: Github, label: "GitHub", href: "https://github.com/tusharsharma811" },
+                          { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com/in/tusharsharma8" },
+                          { icon: Mail, label: "Email", href: "mailto:sharmatushar811@gmail.com" },
                         ].map((contact, index) => (
                           <motion.a
                             key={contact.label}
@@ -337,7 +337,12 @@ export default function Portfolio() {
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ delay: 1.1 + index * 0.1 }}
                             whileHover={{ scale: 1.1, y: -2 }}
-                            className="w-7 h-7 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors"
+                            className="w-7 h-7 z-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors"
+                            onClick={(e) => {
+                              e.preventDefault();
+                              e.stopPropagation();
+                              window.open(contact.href, "_blank");
+                            }}
                           >
                             <contact.icon className="w-3.5 h-3.5 text-white" />
                           </motion.a>
@@ -385,7 +390,6 @@ export default function Portfolio() {
                   <div className="space-y-2">
                     <div className="flex items-center justify-between text-sm">
                       <span className="text-white/70">Recent Projects</span>
-                      <span className="text-emerald-400 font-semibold">15+</span>
                     </div>
                     <div className="space-y-1">
                       {projects.slice(0, 2).map((project, index) => (
@@ -750,11 +754,11 @@ export default function Portfolio() {
               href: "mailto:your.email@example.com",
               color: "bg-purple-500 hover:bg-purple-600",
             },
-            { icon: Github, label: "GitHub", href: "https://github.com", color: "border-gray-700 hover:bg-gray-800" },
+            { icon: Github, label: "GitHub", href: "https://github.com/tusharsharma811", color: "border-gray-700 hover:bg-gray-800" },
             {
               icon: Linkedin,
               label: "LinkedIn",
-              href: "https://linkedin.com",
+              href: "https://www.linkedin.com/in/tusharsharma8",
               color: "border-gray-700 hover:bg-gray-800",
             },
           ].map((contact, index) => (
