@@ -35,7 +35,6 @@ const techStack = [
   { name: "MongoDB", icon: "🍃", category: "Database" },
   { name: "TypeScript", icon: "📘", category: "Language" },
   { name: "JavaScript", icon: "📜", category: "Language" },
-  { name: "Express.js", icon: "🟢", category: "Backend" },
   { name:"C++", icon: "🔧", category: "Language" },
   { name: "Python", icon: "🐍", category: "Language" },
 
