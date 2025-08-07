@@ -32,6 +32,8 @@ const techStack = [
   { name: "React.js", icon: "⚛️", category: "Frontend" },
   { name: "Next.js", icon: "▲", category: "Frontend" },
   { name: "Node.js", icon: "🟢", category: "Backend" },
+    { name: "Expressjs", icon: "", category: "Backend" },
+
   { name: "MongoDB", icon: "🍃", category: "Database" },
   { name: "TypeScript", icon: "📘", category: "Language" },
   { name: "JavaScript", icon: "📜", category: "Language" },
