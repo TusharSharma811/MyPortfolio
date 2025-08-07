@@ -51,7 +51,7 @@ const projects = [
   {
     title: "Real-time Chat Platform",
     description:
-      "Scalable chat application with WebSocket connections, message persistence, and real-time notifications.",
+      "Scalable chat application with WebSocket connections, message persistence, and real-time notifications. Scalable architecture to handle multiple concurrent requests.",
     tech: ["Next.js", "Node.js", "Socket.io", "MongoDB"],
     status: "Production",
     type: "Full-Stack",
