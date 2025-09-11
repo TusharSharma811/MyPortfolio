@@ -1,0 +1,42 @@
+[
+    {
+        "title": "Project 1",
+        "description": "This is a sample project description.",
+        "img": "project1.png",
+        "liveLink": "",
+        "githubLink": "",
+        "type": "main"
+    },
+    {
+        "title": "Project 2",
+        "description": "This is a sample project description.",
+        "img": "project2.png",
+        "liveLink": "",
+        "githubLink": "",
+        "type": "main"
+    },
+    {
+        "title": "Project 3",
+        "description": "This is a sample project description.",
+        "img": "project3.png",
+        "liveLink": "",
+        "githubLink": "",
+        "type": "main"
+    },
+    {
+        "title": "Project 4",
+        "description": "This is a sample project description.",
+        "img": "project4.png",
+        "liveLink": "",
+        "githubLink": "",
+        "type": "side"
+    },
+    {
+        "title": "Project 5",
+        "description": "This is a sample project description.",
+        "img": "project5.png",
+        "liveLink": "",
+        "githubLink": "",
+        "type": "side"
+    }
+]

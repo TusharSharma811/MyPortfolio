@@ -1,0 +1,51 @@
+@import url('https://db.onlinewebfonts.com/c/158942054ad478be6a7116af333ab3cf?family=Styrene+A+Bold+Regular');
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+
+@import "tailwindcss";
+
+
+
+
+:root {
+  --main-bg-color: #F0EEE6;
+  --main-text-color: #141413;
+  --accent-color: #D97757;
+  --secondary-text-color: #000000;
+  --highlight-color: rgba(100, 255, 218, 0.1);
+  --primary-font: 'Styrene A Bold Regular', sans-serif;
+  --secondary-font: 'JetBrains Mono', monospace;
+}
+
+@theme{
+  --font-primary: var(--primary-font);
+  --font-secondary: var(--secondary-font);
+  --color-bg: var(--main-bg-color);
+  --color-text: var(--main-text-color);
+  --color-accent: var(--accent-color);
+  --color-secondary-text: var(--secondary-text-color);
+  --color-highlight: var(--highlight-color);
+}
+
+
+
+@layer components {
+   .link-underline {
+    @apply relative inline-block pb-1 text-secondary-text overflow-hidden transition-all duration-300;
+  }
+
+  .link-underline::after {
+    content: "";
+    @apply absolute bottom-0 left-0 h-[2px] w-full bg-current transition-transform duration-300;
+    transform: translateX(-100%);
+  }
+
+  .link-underline:hover::after,
+  .link-underline:focus::after {
+    transform: translateX(0);
+  }
+  .btn {
+    @apply px-2 py-0.5 text-center align-middle outline-accent outline-1 text-secondary-text font-semibold rounded shadow hover:opacity-90 transition;
+  }
+}
