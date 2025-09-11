@@ -1,4 +1,3 @@
-import React from 'react'
 
 const ProjectCard = ({title , description, imgSRC, githubURL, liveURL} : {title: string, description: string,imgSRC: string, githubURL: string, liveURL: string}) => {
   return (

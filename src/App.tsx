@@ -7,8 +7,8 @@ function App() {
   const [showProjects, setShowProjects] = useState(false);
   const [showSideProjects, setShowSideProjects] = useState(false);
   const [projects] = useState(projectsdata);
-  const [leetCodedata, setLeetCodedata] = useState<any>(null);
-  const [codeforcesdata, setCodeforcesdata] = useState<any>(null);
+  const [leetCodedata, setLeetCodedata] = useState(null);
+  const [codeforcesdata, setCodeforcesdata] = useState(null);
 
   useEffect(() => {
     const fetchLeetCodeUserData = async () => {
