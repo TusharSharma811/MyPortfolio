@@ -1,11 +1,11 @@
 import ProjectCard from "./components/ProjectCard";
 import { useEffect, useState, useRef } from "react";
 import projectsdata from "../src/assets/projects.json";
-import { Navbar } from "./components/Navbar";
+
 import CodingProfileCards from "./components/CodingProfileCards";
 function App() {
-  const [showProjects, setShowProjects] = useState(false);
-  const [showSideProjects, setShowSideProjects] = useState(false);
+  // const [showProjects, setShowProjects] = useState(false);
+  // const [showSideProjects, setShowSideProjects] = useState(false);
   const [projects] = useState(projectsdata);
   const [leetCodedata, setLeetCodedata] = useState(null);
   const [codeforcesdata, setCodeforcesdata] = useState(null);
@@ -79,11 +79,11 @@ function App() {
   };
   return (
     <>
-      <main className="  bg-bg text-text-color font-secondary">
-        <Navbar />
+      <main className="  bg-bg text-text-color font-secondary py-10">
+        {/* <Navbar /> */}
         <div className="flex min-h-screen flex-col gap-5 md:w-1/2 content-center mx-auto">
           <div className="flex flex-col gap-4">
-            <h1 className="text-5xl font-primary font-bold underline md:mt-3">
+            <h1 className="text-6xl font-primary font-semibold underline md:mt-3">
               hi, i am <span className=" text-accent">Tushar Sharma</span>
             </h1>
             <p>
@@ -96,41 +96,35 @@ function App() {
           </div>
           <div className="flex flex-col gap-3">
             <div className="flex gap-3">
-              <a className="link-underline" href="">
+              <a className="link-underline" href="https://github.com/TusharSharma811">
                 github
               </a>
-              <a className="link-underline" href="">
+              <a className="link-underline" href="https://www.linkedin.com/in/tusharsharma8">
                 linkedin
               </a>
-              <a className="link-underline" href="">
-                twitter
+              <a className="link-underline" href="https://x.com/tusharr_twts">
+                X
               </a>
-              <a className="link-underline" href="">
+              <a className="link-underline" href="mailto:sharmatushar811@gmail.com">
                 gmail
               </a>
             </div>
             <div className="flex gap-3">
               <button className="btn">
-                <a href="">resume</a>
+                <a href="/MyResume-updated.pdf" target="_blank" rel="noopener noreferrer">resume</a>
               </button>
               <button className="btn">
-                <a href="">blog</a>
+                <a href="/blog">blog</a>
               </button>
             </div>
           </div>
           <div className="flex flex-col gap-3">
             <h1 className="text-3xl font-primary font-thin ">My Projects:</h1>
-            <ul className="list-disc list-inside pl-3">
-              <li
-                onClick={() => setShowProjects(!showProjects)}
-                className="cursor-pointer hover:underline "
-              >
-                main projects
-              </li>
-              {showProjects && (
+             
+              {(
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
                   {projects.map((project, id) => {
-                    if (project.type === "main") {
+                    
                       return (
                         <ProjectCard
                           key={id}
@@ -141,36 +135,13 @@ function App() {
                           liveURL={project.liveLink}
                         />
                       );
-                    }
+                    
                   })}
                 </div>
               )}
-              <li
-                className="cursor-pointer hover:underline "
-                onClick={() => setShowSideProjects(!showSideProjects)}
-              >
-                side projects
-              </li>
-              {showSideProjects && (
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
-                  {projects.map((project, id) => {
-                    if (project.type === "side") {
-                      return (
-                        <ProjectCard
-                          key={id}
-                          title={project.title}
-                          description={project.description}
-                          imgSRC={project.img}
-                          githubURL={project.githubLink}
-                          liveURL={project.liveLink}
-                        />
-                      );
-                    }
-                  })}
-                </div>
-              )}
-              <li>open source contributions</li>
-            </ul>
+
+            
+            
           </div>
           <div className="flex flex-col gap-3">
             <h1 className="text-3xl font-primary font-thin  ">Skills :</h1>

@@ -1,42 +1,34 @@
 [
     {
-        "title": "Project 1",
-        "description": "This is a sample project description.",
-        "img": "project1.png",
-        "liveLink": "",
-        "githubLink": "",
+        "title": "LoopChat",
+        "description": "Highly scalable, real-time chat application with end-to-end encryption, built using React, Node.js, Express, and Socket.io. Features include user authentication, message history, and media sharing.",
+        "img": "Loop.png",
+        "liveLink": "https://loop-wheat.vercel.app/",
+        "githubLink": "https://github.com/TusharSharma811/Loop",
         "type": "main"
     },
     {
-        "title": "Project 2",
-        "description": "This is a sample project description.",
-        "img": "project2.png",
-        "liveLink": "",
-        "githubLink": "",
+        "title": "ReviewHog",
+        "description": "AI-powered code review tool that integrates with GitHub, providing real-time feedback and suggestions to improve code quality.",
+        "img": "ReviewHog.png",
+        "liveLink": "https://review-hog.vercel.app/",
+        "githubLink": "https://github.com/TusharSharma811/ReviewHog",
         "type": "main"
     },
     {
-        "title": "Project 3",
-        "description": "This is a sample project description.",
-        "img": "project3.png",
-        "liveLink": "",
-        "githubLink": "",
+        "title": "Thoughts",
+        "description": "A platform for sharing and discovering thoughts, built with React and Node.js.",
+        "img": "Thoughts.png",
+        "liveLink": "https://thoughts-henna.vercel.app/login",
+        "githubLink": "https://github.com/TusharSharma811/Thoughts",
         "type": "main"
     },
     {
-        "title": "Project 4",
-        "description": "This is a sample project description.",
-        "img": "project4.png",
-        "liveLink": "",
-        "githubLink": "",
-        "type": "side"
-    },
-    {
-        "title": "Project 5",
-        "description": "This is a sample project description.",
-        "img": "project5.png",
-        "liveLink": "",
-        "githubLink": "",
+        "title": "GenMail",
+        "description": "An AI-powered email generation tool that helps users draft emails quickly and efficiently.",
+        "img": "GenMail.png",
+        "liveLink": "https://genmail-nu.vercel.app/",
+        "githubLink": "https://github.com/TusharSharma811/AI-email-template-generator",
         "type": "side"
     }
 ]
