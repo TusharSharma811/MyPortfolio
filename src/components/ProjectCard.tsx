@@ -1,49 +1,46 @@
+import { ArrowUpRight, Github } from "lucide-react";
 
 const ProjectCard = ({
   title,
   description,
-  imgSRC,
   githubURL,
   liveURL,
 }: {
   title: string;
   description: string;
-  imgSRC: string;
   githubURL: string;
   liveURL: string;
 }) => {
-  
-  
   return (
-    <div className="flex flex-col justify-between min-h-[350px] mt-6 mb-6 border-2 border-accent p-3 rounded-md hover:scale-105 duration-300">
-      {/* Top content */}
-      <div>
-        <h2 className="text-lg font-semibold">{title}</h2>
-        <p className="mt-1 text-sm text-gray-700">{description}</p>
-        <img
-          src={`/${imgSRC}`}
-          alt={title}
-          className="mt-3 rounded-md object-cover h-[180px] w-full"
-        />
+    <div className="project-item group">
+      <div className="flex-1 min-w-0">
+        <h3 className="text-sm font-semibold group-hover:text-accent transition-colors duration-200">
+          {title}
+        </h3>
+        <p className="mt-1 text-xs text-muted leading-relaxed line-clamp-2">
+          {description}
+        </p>
       </div>
-
-      {/* Bottom links */}
-      <div className="flex justify-between mt-3">
+      <div className="flex items-center gap-3 shrink-0 mt-1">
         <a
-          className="link-underline text-blue-600 hover:text-blue-800"
           href={githubURL}
           target="_blank"
           rel="noopener noreferrer"
+          className="text-muted hover:text-accent transition-colors duration-200"
+          aria-label="GitHub"
+          onClick={(e) => e.stopPropagation()}
         >
-          GitHub
+          <Github size={15} />
         </a>
         <a
-          className="link-underline text-blue-600 hover:text-blue-800"
           href={liveURL}
           target="_blank"
           rel="noopener noreferrer"
+          className="text-muted hover:text-accent transition-colors duration-200"
+          aria-label="Live Demo"
+          onClick={(e) => e.stopPropagation()}
         >
-          Live Demo
+          <ArrowUpRight size={15} />
         </a>
       </div>
     </div>
