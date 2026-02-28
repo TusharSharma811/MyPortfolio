@@ -1,49 +1,54 @@
 import { ArrowUpRight, Github } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const ProjectCard = ({
+  slug,
   title,
   description,
   githubURL,
   liveURL,
 }: {
+  slug: string;
   title: string;
   description: string;
   githubURL: string;
   liveURL: string;
 }) => {
   return (
-    <div className="project-item group">
+    <Link to={`/project/${slug}`} className="project-item group">
       <div className="flex-1 min-w-0">
-        <h3 className="text-sm font-semibold group-hover:text-accent transition-colors duration-200">
+        <h3 className="text-base font-semibold group-hover:text-accent transition-colors duration-200">
           {title}
         </h3>
-        <p className="mt-1 text-xs text-muted leading-relaxed line-clamp-2">
+        <p className="mt-1 text-sm text-muted leading-relaxed line-clamp-2">
           {description}
         </p>
       </div>
       <div className="flex items-center gap-3 shrink-0 mt-1">
-        <a
-          href={githubURL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-muted hover:text-accent transition-colors duration-200"
+        <span
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            window.open(githubURL, "_blank");
+          }}
+          className="text-muted hover:text-accent transition-colors duration-200 cursor-pointer"
           aria-label="GitHub"
-          onClick={(e) => e.stopPropagation()}
         >
-          <Github size={15} />
-        </a>
-        <a
-          href={liveURL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-muted hover:text-accent transition-colors duration-200"
+          <Github size={17} />
+        </span>
+        <span
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            window.open(liveURL, "_blank");
+          }}
+          className="text-muted hover:text-accent transition-colors duration-200 cursor-pointer"
           aria-label="Live Demo"
-          onClick={(e) => e.stopPropagation()}
         >
-          <ArrowUpRight size={15} />
-        </a>
+          <ArrowUpRight size={17} />
+        </span>
       </div>
-    </div>
+    </Link>
   );
 };
 

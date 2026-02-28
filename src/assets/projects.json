@@ -1,34 +1,107 @@
 [
     {
-        "title": "LoopChat",
-        "description": "Highly scalable, real-time chat application with end-to-end encryption, built using React, Node.js, Express, and Socket.io. Features include user authentication, message history, and media sharing.",
-        "img": "Loop.png",
-        "liveLink": "https://loop-wheat.vercel.app/",
-        "githubLink": "https://github.com/TusharSharma811/Loop",
-        "type": "main"
-    },
-    {
+        "slug": "reviewhog",
         "title": "ReviewHog",
+        "subtitle": "AI-Powered Code Review Tool",
+        "year": "2025",
         "description": "AI-powered code review tool that integrates with GitHub, providing real-time feedback and suggestions to improve code quality.",
         "img": "ReviewHog.png",
         "liveLink": "https://review-hog.vercel.app/",
         "githubLink": "https://github.com/TusharSharma811/ReviewHog",
-        "type": "main"
+        "type": "main",
+        "techStack": ["TypeScript", "Node.js", "Express.js", "PostgreSQL", "LangChain", "GitHub OAuth"],
+        "problem": "Manual pull request reviews are time-consuming and inconsistent across teams. Developers spend hours reviewing PRs, and feedback quality varies widely between reviewers.",
+        "solution": "Built an AI-powered automation tool that reviews GitHub PRs and generates structured, consistent feedback using LangChain's AI pipeline.",
+        "architectureHighlights": [
+            "Event-driven backend handling GitHub Webhook events",
+            "Asynchronous PR diff processing",
+            "LangChain-powered AI pipeline for structured review comments",
+            "Secure GitHub OAuth authentication",
+            "PostgreSQL for structured review storage"
+        ],
+        "impact": [
+            "Reduced manual code review effort",
+            "Improved consistency across repositories",
+            "Designed scalable webhook processing system"
+        ],
+        "metrics": null
     },
     {
+        "slug": "loopchat",
+        "title": "LoopChat",
+        "subtitle": "Scalable Real-Time Chat Application",
+        "year": "2025",
+        "description": "Highly scalable, real-time chat application built using React, Node.js, Express, and Socket.io. Features include user authentication, message history, and media sharing.",
+        "img": "Loop.png",
+        "liveLink": "https://loop-wheat.vercel.app/",
+        "githubLink": "https://github.com/TusharSharma811/Loop",
+        "type": "main",
+        "techStack": ["TypeScript", "React.js", "Zustand", "TailwindCSS", "Node.js", "MongoDB", "Socket.io", "Cloudinary"],
+        "problem": "Traditional polling-based chat systems create redundant server load and latency, leading to poor user experience at scale.",
+        "solution": "Developed a real-time messaging platform using WebSockets, with optimized state management and media handling for a smooth, scalable chat experience.",
+        "architectureHighlights": [
+            "REST APIs + WebSocket-based messaging",
+            "MongoDB for message persistence",
+            "Efficient global state management using Zustand",
+            "Cloudinary for optimized media handling"
+        ],
+        "impact": null,
+        "metrics": [
+            "Supports 1,000+ concurrent users",
+            "<1s average message latency",
+            "Reduced redundant requests by 70%",
+            "Reduced re-renders by 35%",
+            "Reduced media payload size by ~40%"
+        ]
+    },
+    {
+        "slug": "thoughts",
         "title": "Thoughts",
+        "subtitle": "Social Thought-Sharing Platform",
+        "year": "2024",
         "description": "A platform for sharing and discovering thoughts, built with React and Node.js.",
         "img": "Thoughts.png",
         "liveLink": "https://thoughts-henna.vercel.app/login",
         "githubLink": "https://github.com/TusharSharma811/Thoughts",
-        "type": "main"
+        "type": "main",
+        "techStack": ["React", "Node.js", "Express.js", "MongoDB", "TailwindCSS"],
+        "problem": "Social platforms are cluttered with noise. There's no minimal, focused space for sharing and discovering concise ideas.",
+        "solution": "Built a clean, distraction-free platform focused purely on sharing short-form thoughts with a simple, modern UI.",
+        "architectureHighlights": [
+            "RESTful API with Express.js",
+            "MongoDB for flexible document storage",
+            "JWT-based authentication",
+            "Responsive design with TailwindCSS"
+        ],
+        "impact": [
+            "Clean, focused reading experience",
+            "Fast load times with minimal design"
+        ],
+        "metrics": null
     },
     {
+        "slug": "genmail",
         "title": "GenMail",
+        "subtitle": "AI-Powered Email Generator",
+        "year": "2024",
         "description": "An AI-powered email generation tool that helps users draft emails quickly and efficiently.",
         "img": "GenMail.png",
         "liveLink": "https://genmail-nu.vercel.app/",
         "githubLink": "https://github.com/TusharSharma811/AI-email-template-generator",
-        "type": "side"
+        "type": "side",
+        "techStack": ["React", "Node.js", "OpenAI API", "TailwindCSS"],
+        "problem": "Writing professional emails is tedious and time-consuming, especially when drafting from scratch repeatedly.",
+        "solution": "Created an AI-powered tool that generates well-structured email drafts based on user prompts, saving time and ensuring professional communication.",
+        "architectureHighlights": [
+            "OpenAI API integration for email generation",
+            "Prompt engineering for context-aware outputs",
+            "Clean copy-to-clipboard functionality",
+            "Responsive React frontend"
+        ],
+        "impact": [
+            "Reduces email drafting time significantly",
+            "Consistent professional tone across communications"
+        ],
+        "metrics": null
     }
 ]

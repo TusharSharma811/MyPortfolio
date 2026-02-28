@@ -46,7 +46,7 @@ function App() {
           <h1 className="font-primary text-4xl md:text-5xl font-semibold leading-tight">
             Tushar Sharma
           </h1>
-          <p className="mt-4 text-muted text-sm leading-relaxed max-w-lg">
+          <p className="mt-4 text-muted text-base leading-relaxed max-w-lg">
             Final year B.Tech student in Information Technology. I love building
             things for the web and learning new technologies.
           </p>
@@ -115,7 +115,7 @@ function App() {
                 <button
                   key={f}
                   onClick={() => setActiveFilter(f)}
-                  className={`text-xs font-secondary px-3 py-1 rounded-full border transition-all duration-300 capitalize
+                  className={`text-sm font-secondary px-3 py-1 rounded-full border transition-all duration-300 capitalize
                     ${
                       activeFilter === f
                         ? "bg-accent text-bg border-accent"
@@ -132,6 +132,7 @@ function App() {
             {filteredProjects.map((project, id) => (
               <ProjectCard
                 key={id}
+                slug={project.slug}
                 title={project.title}
                 description={project.description}
                 githubURL={project.githubLink}
@@ -190,7 +191,7 @@ function App() {
               },
             ].map((category) => (
               <div key={category.label}>
-                <span className="text-xs text-muted font-secondary uppercase tracking-wider">
+                <span className="text-sm text-muted font-secondary uppercase tracking-wider">
                   {category.label}
                 </span>
                 <div className="flex flex-wrap gap-2 mt-2">
@@ -222,7 +223,7 @@ function App() {
               rel="noopener noreferrer"
               className="flex items-center justify-between py-3 border-b border-border group hover:border-accent transition-colors duration-200"
             >
-              <span className="text-sm group-hover:text-accent transition-colors duration-200">
+              <span className="text-base group-hover:text-accent transition-colors duration-200">
                 Google Cloud Computing Foundations Certificate
               </span>
               <ArrowUpRight
@@ -236,7 +237,7 @@ function App() {
               rel="noopener noreferrer"
               className="flex items-center justify-between py-3 border-b border-border group hover:border-accent transition-colors duration-200"
             >
-              <span className="text-sm group-hover:text-accent transition-colors duration-200">
+              <span className="text-base group-hover:text-accent transition-colors duration-200">
                 CCNA: Introduction to Networks
               </span>
               <ArrowUpRight
@@ -279,7 +280,7 @@ function App() {
                 rel="noopener noreferrer"
                 className="flex items-center justify-between py-3 border-b border-border group hover:border-accent transition-colors duration-200"
               >
-                <span className="text-sm group-hover:text-accent transition-colors duration-200">
+                <span className="text-base group-hover:text-accent transition-colors duration-200">
                   {profile.name}
                 </span>
                 <ExternalLink
@@ -293,7 +294,7 @@ function App() {
 
         {/* ── Footer ── */}
         <div className="section-divider" />
-        <footer className="text-center text-xs text-muted py-4">
+        <footer className="text-center text-sm text-muted py-4">
           <p>
             Built with React & TailwindCSS •{" "}
             <a
