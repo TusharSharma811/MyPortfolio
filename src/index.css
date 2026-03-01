@@ -32,6 +32,16 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Background image */
+body {
+  background-image: url('./assets/Gemini_Generated_Image_cr9gxmcr9gxmcr9g.png');
+  background-size: cover;
+  background-position: center 90%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  opacity: 0.95;
+}
+
 /* Selection color */
 ::selection {
   background-color: #F95C4B40;

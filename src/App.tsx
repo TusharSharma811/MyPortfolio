@@ -34,7 +34,7 @@ function App() {
   };
 
   return (
-    <main className="bg-bg text-text-color font-secondary min-h-screen">
+    <main className="text-text-color font-secondary min-h-screen">
       <div className="max-w-2xl mx-auto px-6 py-16 md:py-24">
         {/* ── Hero ── */}
         <motion.section
